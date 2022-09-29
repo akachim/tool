@@ -260,7 +260,7 @@ if inn in mmm:
         s = requests.post(url1, parameters, headers, **('data', 'headers'))
         prof = '[+]=> Active Profile :: ' + f + '\n\n'
         ns = open(ms, 'r').readlines()
-        [ 0.001 for pro in prof ](None, None, None)
+        [ 0.001 for pro in prof ]=(None, None, None)
     if not None:
         pass
     return None
