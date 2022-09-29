@@ -233,7 +233,8 @@ for linee in rrr:
 	mmm = mmm.split(',')
 	print('')
 inn = input(BOLD + CYAN + '[+] Mobile Number :: ')
-if inn in mmm:                                                                                                                                                                       token = input('[+] Token File :: ')
+if inn in mmm:
+    token = input('[+] Token File :: ')
     with open(token, 'r') as f2:
         access_token = f2.read()
         payload = {
