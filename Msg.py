@@ -43,24 +43,23 @@ J2 = "[#FF8F00]" # Jingga
 A2 = "[#AAAAAA]" # Abu-Abu
 
 def modelsInstaller():
-	try :
-		models = ['requests', 'colorama']
-		for model in models:
-			try:
-				if(sys.version_info[0] < 3):
-					os.system('cd C:\Python27\Scripts & pip install {}'.format(model))
-				else :
-					os.system('python -m pip install {}'.format(model))
-				print (' ')
-				print (' [+] {} has been installed successfully, Restart the program.'.format(model))
-				sys.exit()
-				print (' ')
-			except:
-				print (' [-] Install {} manually.'.format(model))
-				print (' ')
-				continue
-				return None
-				return None
+	models = ['requests', 'colorama']
+	for model in models:
+		try:
+			if(sys.version_info[0] < 3):
+				os.system('cd C:\Python27\Scripts & pip install {}'.format(model))
+			else :
+				os.system('python -m pip install {}'.format(model))
+			print (' ')
+			print (' [+] {} has been installed successfully, Restart the program.'.format(model))
+			sys.exit()
+			print (' ')
+		except:
+			print (' [-] Install {} manually.'.format(model))
+			print (' ')
+			continue
+			return None
+	return None
 				
 				
 import base64
